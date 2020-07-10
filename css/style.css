@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.4;
+    height: 100%;
+}
+
+li {
+    list-style: none;
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+p{
+    margin: 0.75rem 0;
+}
+
+/* Utility Classes */
+
+.text-primary {
+    color: #95c292;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 2rem;
+    overflow: hidden;
+
+}
+
+.lg-heading{
+
+    font-size: 4rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+
+}
+
+.md-heading{
+
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+
+}
+
+.bg-light {
+    color: #333;
+    background-color: #fff;
+}
+
+.bg-dark {
+    color: #fff;
+    background-color: #333;
+}
+
+
+.bg-primary {
+    color: #fff;
+    background-color: #95c292;
+}
+
+.py-1 { padding: 1.5rem 0;}
+.py-2 { padding: 2rem 0; }
+.py-3 { padding: 3rem 0; }
+
+.p-1 { padding: 1.5rem;}
+.p-2 { padding: 2rem; }
+.p-3 { padding: 3rem; }
+
+.txt-center {
+    text-align: center;
+}
+
+/* Navbar */
+
+#navbar {
+    display: flex;
+    background-color: #322;
+    color: #fff;
+    position: sticky;
+    top:0;
+    justify-content: space-between;
+    z-index: 1;
+    padding: 1rem;
+}
+
+#navbar .navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+#navbar .navbar__menu a {
+    color: #fff;
+    padding: 0.75rem;
+    margin:0 0.25rem;
+}
+
+#navbar .navbar__menu a:hover{
+    background-color: #95c292;
+    border-radius: 5px;
+}
+
+
+/* Showcase */
+
+#showcase {
+    /* background-color: #333; */
+    background-image: url('../imgs/showcase.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: #fff;
+}
+
+
+#showcase .showcase__content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    padding:0 2rem;
+
+    /*Overlay*/
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    right: 0;
+    left:0;
+    background-color: rgba(0,0,0,.5);
+}
+
+
+
+#showcase .showcase__description {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+#showcase .showcase__btn {
+    display: inline-block;
+    color: #fff;
+    background-color: #95c292;
+    border: none;
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+}
+
+#showcase .showcase__btn:hover {
+    background-color: #85b183;
+}
+
+#showcase .showcase__btn-dark {
+    background-color: #333;
+    color:#fff
+}
+
+
+
+
+/* Section: What we do */
+#what .what__title {
+    text-align: center;
+}
+
+#what .what__itemcontainer {
+    display: flex;
+    padding: 1rem;
+}
+
+
+#what .what__item {
+    flex: 1;
+    text-align: center;
+    padding: 1rem;
+}
+
+#what .what__item i {
+    background-color: #95c292;
+    padding: 1rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    
+    font-size: 2rem;
+}
+
+
+/* Section: Who we are */
+
+#who {
+    display: flex;
+}
+
+#who div{
+    flex: 1;
+}
+
+#who .who__img{
+    background: url(../imgs/people.jpg) no-repeat center center/cover;
+}
+
+#who .who__list {
+    margin: 0.5rem 0;
+    
+}
+
+
+#who .who__list li {
+    padding: 0.5rem 0;
+    border-bottom: #444 solid 1px;
+}
+
+
+/* Clients */
+
+#clients .clients__items {
+    display: flex;
+}
+
+#clients .clients__items img {
+    display: block;
+    margin: auto;
+    width: 60%;
+}
+
+
+/* Section: Contact*/
+
+#contact {
+    display: flex;
+}
+
+#contact .contact__map, #contact .contact__form {
+    flex: 1;
+}
+
+#contact .contact__form .form-group {
+    margin: 0.75rem;
+}
+
+#contact .contact__form label {
+    display: block;
+}
+
+#contact .contact__form input,
+#contact .contact__form textarea {
+    width: 100%;
+    padding: 0.5rem;
+}
+
+#contact .contact__form input[type="submit"] {
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+
+#map {
+    height: 100%;
+  }
+
+
+
+
+  /* Media Query */
+
+  @media screen and (max-width: 1100px) {
+
+    #what .what__itemcontainer .what__item {
+        display: flex;
+        text-align: left;
+    }
+
+    #what .what__itemcontainer .what__item i {
+
+        margin-right: 1.3rem;
+        align-self: center;
+        margin-bottom: 0;
+    }
+
+    #contact .contact__map  {
+        flex: 2;
+    }
+}
+
+
+  @media screen and (max-width: 768px) {
+
+    #what .what__itemcontainer {
+        display: block;
+        padding: 1rem;
+    }
+
+    #what .what__itemcontainer .what__item {
+        display: flex;
+        text-align: left;
+    }
+
+    #what .what__itemcontainer .what__item i {
+
+        margin-right: 1.3rem;
+        align-self: center;
+        margin-bottom: 0;
+    }
+
+
+}
+
+
+@media(max-width: 500px) {
+
+    .container {
+        padding: 0;
+    }
+    #navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #navbar .navbar__logo {
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+
+    #navbar ul {
+        padding:0.5rem;
+    }
+
+    #navbar .navbar__menu a { 
+        display: inline-block;
+        margin: 0.3rem 0.35rem;
+        padding: 0 0.1rem;
+
+    }
+
+    #showcase .showcase__content {
+        
+        top: 120px;
+
+    }
+
+    #who {
+        display: block;
+    }
+
+    #who .who__img {
+        display: none;
+    }
+
+    #clients .clients__items img {
+        width: 86%;
+    }
+
+    #contact {
+        flex-direction: column;
+    }
+
+    #contact .contact__map {
+        height:240px;
+        border-top: 2px solid #333;
+    } 
+
+    
+}
+
+@media (max-height: 568px) {
+
+    #navbar {
+        padding: 0.2rem 0;
+    }
+
+    #navbar .navbar__logo {
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+    #showcase .showcase__content {
+        margin-top: -2rem;
+        top: 135px;
+    }
+    
+    #showcase .showcase__description {
+        font-size: 1rem;
+    }
+
+    .lg-heading {
+        font-size: 3rem;
+    }
+
+
+}
+
